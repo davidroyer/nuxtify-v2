@@ -39,7 +39,7 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   // plugins: ['@/plugins/cms.client.js'],
-  plugins: ['@/plugins/cms.js'],
+  plugins: [],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
