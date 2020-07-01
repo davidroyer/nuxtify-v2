@@ -1,0 +1,1 @@
+# NuxtContent Notes
