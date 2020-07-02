@@ -66,7 +66,7 @@ export default {
    ** See https://content.nuxtjs.org/configuration
    */
   content: {
-    // dir: '_CMS/content',
+    dir: '.CONTENT',
     markdown: {
       plugins: ['remark-emoji'],
       prism: {
@@ -80,6 +80,7 @@ export default {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    treeShake: true,
     theme: {
       dark: false,
       themes: {

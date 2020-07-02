@@ -59,6 +59,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-footer :absolute="!fixed" app>
+      <pre>{{ $store.state.navMenu }}</pre>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>

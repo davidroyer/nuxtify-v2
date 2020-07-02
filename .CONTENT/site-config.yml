@@ -1,0 +1,24 @@
+title: Nuxtify
+
+description: Site description goes here for SEO
+
+lang: en
+
+ogImage: share.png
+
+shortName: Nuxtify
+
+url: https://nuxtify.netlify.com
+
+navMenu:
+  - index:
+    to: /
+    label: Home
+
+  - articles:
+      label: Articles
+      to: /articles
+
+  - projects:
+    label: Projects
+    to: /projects
