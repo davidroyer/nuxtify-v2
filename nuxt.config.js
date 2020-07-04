@@ -58,6 +58,7 @@ export default {
    */
   modules: [
     '@nuxtjs/pwa',
+    'nuxt-webfontloader',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content'
   ],
@@ -74,13 +75,27 @@ export default {
       }
     }
   },
+
+  /**
+   * Nuxt Webfontloader module configuration
+   */
+  webfontloader: {
+    google: {
+      families: [
+        'Roboto:100,300,400,500,700,900&display=swap',
+        'Material+Icons'
+      ]
+    }
+  },
+
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    treeShake: true,
+    // defaultAssets: 'false',
+    // treeShake: true,
     theme: {
       dark: false,
       themes: {
