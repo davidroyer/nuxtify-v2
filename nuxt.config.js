@@ -33,7 +33,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  // css: ['material-design-icons-iconfont/dist/material-design-icons.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -82,8 +82,8 @@ export default {
   webfontloader: {
     google: {
       families: [
-        'Roboto:100,300,400,500,700,900&display=swap',
-        'Material+Icons'
+        'Roboto:100,300,400,500,700,900&display=swap'
+        // 'Material+Icons'
       ]
     }
   },
@@ -94,7 +94,7 @@ export default {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    // defaultAssets: 'false',
+    defaultAssets: 'false',
     // treeShake: true,
     theme: {
       dark: false,
@@ -109,11 +109,16 @@ export default {
           success: colors.green.accent3
         }
       }
+    },
+    icons: {
+      iconfont: 'mdiSvg' // || 'md' || 'fa' || 'fa4' || 'mdi', // default - only for display purposes
     }
   },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {
+    extractCSS: true
+  }
 }

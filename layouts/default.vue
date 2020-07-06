@@ -39,10 +39,12 @@
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>mdi-menu</v-icon>
+        <!-- <v-icon>menu</v-icon> -->
       </v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
+        <v-icon>{{ emailIcon }}</v-icon>
         <nuxt />
       </v-container>
     </v-main>
@@ -66,20 +68,23 @@
 </template>
 
 <script>
+import { mdiEmail, mdiApps, mdiChartBubble } from '@mdi/js'
+
 export default {
   data() {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
+      emailIcon: mdiEmail,
       items: [
         {
-          icon: 'mdi-apps',
+          icon: mdiApps,
           title: 'Welcome',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: mdiChartBubble,
           title: 'Blog',
           to: '/blog'
         }
