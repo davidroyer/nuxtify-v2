@@ -27,16 +27,16 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || ''
       }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
-        async: true
-      }
     ]
+    // link: [
+    //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    //   {
+    //     rel: 'stylesheet',
+    //     href:
+    //       'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
+    //     async: true
+    //   }
+    // ]
   },
   /*
    ** Global CSS
@@ -88,25 +88,13 @@ export default {
     }
   },
 
-  /**
-   * Nuxt Webfontloader module configuration
-   */
-  webfontloader: {
-    google: {
-      families: [
-        'Roboto:100,300,400,500,700,900&display=swap'
-        // 'Material+Icons'
-      ]
-    }
-  },
-
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    defaultAssets: false,
+    // defaultAssets: true,
     // treeShake: true,
     theme: {
       dark: false,
@@ -127,6 +115,19 @@ export default {
     //   // iconfont: 'mdiSvg' // || 'md' || 'fa' || 'fa4' || 'mdi', // default - only for display purposes
     // }
   },
+
+  /**
+   * Nuxt Webfontloader module configuration
+   */
+  webfontloader: {
+    google: {
+      families: [
+        'Roboto:100,300,400,500,700,900&display=swap'
+        // 'Material+Icons'
+      ]
+    }
+  },
+
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
