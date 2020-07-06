@@ -28,11 +28,23 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
+        async: true
+      }
+    ]
   },
   /*
    ** Global CSS
    */
+
+  css: [
+    // 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
+  ],
   // css: ['material-design-icons-iconfont/dist/material-design-icons.css'],
   /*
    ** Plugins to load before mounting the App
@@ -94,7 +106,7 @@ export default {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    defaultAssets: 'false',
+    defaultAssets: false,
     // treeShake: true,
     theme: {
       dark: false,
@@ -109,10 +121,11 @@ export default {
           success: colors.green.accent3
         }
       }
-    },
-    icons: {
-      iconfont: 'mdiSvg' // || 'md' || 'fa' || 'fa4' || 'mdi', // default - only for display purposes
     }
+    // icons: {
+    //   iconfont: 'mdi' // || 'md' || 'fa' || 'fa4' || 'mdi', // default - only for display purposes
+    //   // iconfont: 'mdiSvg' // || 'md' || 'fa' || 'fa4' || 'mdi', // default - only for display purposes
+    // }
   },
   /*
    ** Build configuration
@@ -122,3 +135,8 @@ export default {
     extractCSS: true
   }
 }
+
+// http://localhost:3000/_nuxt/node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff2
+//
+// https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css
+// https://cdn.jsdelivr.net/npm/@mdi/font@latest/fonts/materialdesignicons-webfont.woff2?v=5.3.45

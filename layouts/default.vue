@@ -44,7 +44,7 @@
     </v-app-bar>
     <v-main>
       <v-container>
-        <v-icon>{{ emailIcon }}</v-icon>
+        <v-icon>mdi-email</v-icon>
         <nuxt />
       </v-container>
     </v-main>
@@ -68,23 +68,20 @@
 </template>
 
 <script>
-import { mdiEmail, mdiApps, mdiChartBubble } from '@mdi/js'
-
 export default {
   data() {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
-      emailIcon: mdiEmail,
       items: [
         {
-          icon: mdiApps,
+          icon: 'mdi-apps',
           title: 'Welcome',
           to: '/'
         },
         {
-          icon: mdiChartBubble,
+          icon: 'mdi-chart-bubble',
           title: 'Blog',
           to: '/blog'
         }
