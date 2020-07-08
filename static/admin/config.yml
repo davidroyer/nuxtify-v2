@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: master
+
+
+local_backend: true
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - label: Configs
+    name: configs
+    files:
+      - name: "settings"
+        label: "Site Settings"
+        file: "_CMS/settings.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Company Email", name: "date", widget: "datetime" }
+          # - {
+          #     label: "Featured Image",
+          #     name: "thumbnail",
+          #     widget: "image",
+          #     required: true,
+          #   }
+          - { label: "Content Test", name: "content-test", widget: "markdown" }
